@@ -7,5 +7,5 @@
 	<%=comment.body%>
 </p>
 <p>
-	<%=link_to 'Destroy Comment', [@article.user, comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %>
+	<%=link_to 'Delete Comment', [@article.user, comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>

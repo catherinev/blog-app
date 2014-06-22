@@ -1,0 +1,18 @@
+<div class = "post">
+  <h2><%= link_to article.title, user_article_path(@user, article) %></h2>
+  <p><%= article.text %></p>
+  <%unless article.tags.empty?%>
+		<p>Tags: 
+			<%article.tags.each do |tag|%>
+			<div class = "tag"><%=tag.label%></div>
+			<%end%>
+		</p>
+	<%end%>
+  
+    <%if @user == current_user %>
+    <td><%= link_to 'Edit', edit_user_article_path(current_user, article)%></td>
+    <td><%= link_to 'Delete', user_article_path(current_user, article), method: :delete, data: { confirm: 'Are you sure?'}%></td>
+    <%end%>
+</div>
+
+

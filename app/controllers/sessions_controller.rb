@@ -13,8 +13,6 @@ class SessionsController < ApplicationController
 	  	flash[:error] = 'Invalid email/password combination'
 	    render 'new'# Create an error message and re-render the signin form.
 	  end
-
-
 	end
 
 	def destroy
