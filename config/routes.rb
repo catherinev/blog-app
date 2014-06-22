@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   match '/signup', to: 'users#new', via: 'get'
   match 'signin', to: 'sessions#new', via: 'get'
   match 'signout', to: 'sessions#destroy', via: 'delete'
+  get 'users/:user_id/tags/:id' => 'tags#show', as: :tag
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
