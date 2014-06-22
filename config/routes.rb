@@ -4,10 +4,17 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   
-  resources :articles do 
-    resources :comments
+  resources :users do 
+    resources :articles do 
+      resources :comments
+    end
   end
+
+  resource :sessions, only: [:new, :create, :destroy]
   root 'welcome#index'
+  match '/signup', to: 'users#new', via: 'get'
+  match 'signin', to: 'sessions#new', via: 'get'
+  match 'signout', to: 'sessions#destroy', via: 'delete'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

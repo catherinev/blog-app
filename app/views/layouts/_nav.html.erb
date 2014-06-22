@@ -1,0 +1,25 @@
+
+
+<div class = "button_box">
+	<%if logged_in?%>
+		<div class = "button">
+		  <%=link_to 'New Post', new_user_article_path(current_user)%>
+		</div>
+
+		<div class = "button">
+			  <%=link_to 'My Blog', user_articles_path(current_user)%>
+		</div>
+		<div class = "button">
+			<%= link_to "Sign out", signout_path, method: "delete" %>
+		</div>
+	<%else%>
+		<div class = "button">
+		  <%=link_to 'Sign in', signin_path%>
+		</div>
+	<%end%>
+</div>
+
+
+<h1><%=link_to "The Awesome Blogger.", root_path%></h1>
+
+

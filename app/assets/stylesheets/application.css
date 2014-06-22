@@ -13,3 +13,133 @@
  *= require_tree .
  *= require_self
  */
+html {
+	background-color: #5DC1BA;
+}
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  background-color: #E3C316;
+}
+
+th {
+  text-align: left;
+}
+
+
+.post {
+	margin: 10px 5px;
+	padding: 5px 10px;
+	background-color: #E2601B;
+	border: 2px solid #5C4549;
+}
+
+.tag {
+	display: inline;
+	background-color: #BD2915;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+}
+
+h1 {
+	padding-top: 30px;
+	margin-bottom: 40px;
+}
+
+h1 a{
+	color: white;
+	text-decoration: none;
+}
+
+h2 {
+	margin: 0;
+	color: white;
+}
+
+h2 a{
+	color: white;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	color: #5DC1BA;
+	text-decoration: none;
+}
+
+
+
+h3 {
+	font-size: 12px;
+	margin: 0px;
+	font-style: italic;
+}
+
+input[type="submit"] {
+	color: white;
+	background-color: #5DC1BA;
+	padding: 5px;
+	margin: 5px;
+}
+
+/*#login_button {
+	color: white;
+	background-color: #5DC1BA;
+	position: relative;
+	bottom: 50px;
+	float: right;
+}*/
+.button {
+	color: white;
+	background-color: #5DC1BA;
+	display: block;
+	margin: 2px;
+}
+
+.button_box {
+	position: relative;
+	float: right;
+}
+
+
+div {
+	padding: 5px;
+}
+
+#delete {
+	float: right;
+	position: relative;
+	bottom: 40px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+
+#error p {
+	padding: 0;
+	margin: 0;
+	color: #BD2915;
+}
+
+#sidebar {
+	position: absolute;
+	width: 220px;
+	right: 10px;
+}
+
+#sidebar ul {
+	padding: 0;
+}
+
+#sidebar li {
+	padding: 5px 0;
+}
