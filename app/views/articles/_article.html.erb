@@ -9,10 +9,10 @@
 		</p>
 	<%end%>
   
-    <%if @user == current_user %>
-    <td><%= link_to 'Edit', edit_user_article_path(current_user, article)%></td>
-    <td><%= link_to 'Delete', user_article_path(current_user, article), method: :delete, data: { confirm: 'Are you sure?'}%></td>
-    <%end%>
+  <%if @user == current_user %>
+    <%= link_to 'Edit', edit_user_article_path(current_user, article)%> 
+    <%= link_to 'Delete', user_article_path(current_user, article), method: :delete, data: { confirm: 'Are you sure?'}%>
+  <%end%>
 </div>
 
 

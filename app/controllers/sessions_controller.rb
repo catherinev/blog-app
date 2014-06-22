@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 		user = User.find_by(email: params[:session][:email])
 		if user && user.authenticate(params[:session][:password])
     	session[:user_id] = user.id
-    	redirect_to user
+    	redirect_to user_articles_path(user)
     	# Sign the user in and redirect to the user's show page.
 	  else
 	  	flash[:error] = 'Invalid email/password combination'

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resource :sessions, only: [:new, :create, :destroy]
-  root 'welcome#index'
+  root 'users#new'
   match '/signup', to: 'users#new', via: 'get'
   match 'signin', to: 'sessions#new', via: 'get'
   match 'signout', to: 'sessions#destroy', via: 'delete'

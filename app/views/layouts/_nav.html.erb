@@ -21,5 +21,10 @@
 
 
 <h1><%=link_to "The Awesome Blogger.", root_path%></h1>
+<% if @user && @user.name != nil %>
+	<p style = "font-variant:small-caps"><em><%=link_to @user.name + "'s blog", user_articles_path(@user), {style: 'color:black'}%></em></p>
+<% else%>
+	<p style = "font-variant:small-caps"><em>where Everything is awesome.</em></p>
+<% end%>
 
 
