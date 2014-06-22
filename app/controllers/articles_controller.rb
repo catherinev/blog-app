@@ -7,19 +7,22 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(article_params)
 
+
 		if @article.save
-			redirect_to @article
+			current_user.articles << @article
+			redirect_to user_articles_path
 		else
 			render 'new'
 		end
 	end
 
 	def show
+		@user = User.find(params[:user_id])
 	  @article = Article.find(params[:id])
 	end
 
 	def index
-		@articles = Article.all
+		@articles = Article.where("user_id = ?", params[:user_id]).order('created_at DESC')
 	end
 
 	def edit
@@ -40,7 +43,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.destroy
 
-		redirect_to articles_path
+		redirect_to user_articles_path
 	end
 
 
